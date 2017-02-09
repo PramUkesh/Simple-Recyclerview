@@ -220,3 +220,7 @@ Now we need to create a layout that the Books can use:
 ```
 ##The End
 Now you're done :) . If you did not understand a step, just create a new issue or look at the sample app.
+
+
+##Disclaimer
+All the code provided in this repository is permitted to use without mentioning the author (me :smile:). However, claiming this guide as if you made the guide yourself is NOT PERMITTED.
