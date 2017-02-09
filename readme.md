@@ -1,11 +1,11 @@
 ##Step 1
 First add this to your app level build.gradle:
-
+```
 	compile 'com.android.support:design:25.1.0'
-
+```
 ##Step 2
 Add this to your Activity's xml file:
-
+```
  <android.support.v7.widget.RecyclerView
 	android:id="@+id/recyclerView"
 	android:scrollbars="vertical"
@@ -16,19 +16,19 @@ Add this to your Activity's xml file:
 	android:layout_alignParentTop="true"
 	android:layout_alignParentLeft="true"
 	android:layout_alignParentStart="true" />
-
+```
 ##Step 3
 Add the following variables at the top of your class:
-
+```
     ArrayList<Book> books = new ArrayList<>();
     private RecyclerView mRecyclerView;
     private RecyclerView.Adapter mAdapter;
     private RecyclerView.LayoutManager mLayoutManager;
     private RecyclerViewAdapter mRecyclerViewAdapter;
-
+```
 ##Step 4
 We are going to use a book collection as example, so create a class called 'Book' and do the same as down below
-
+```
 	public class Book {
 	    private String title;
 	    private String author;
@@ -58,10 +58,10 @@ We are going to use a book collection as example, so create a class called 'Book
 	        return amountOfPages;
 	    }
 	}
-
+```
 ##Step 5
 Now create a new class called RecyclerViewAdapter:
-
+```
 	import android.support.v7.widget.RecyclerView;
 	import android.view.LayoutInflater;
 	import android.view.View;
@@ -116,10 +116,10 @@ Now create a new class called RecyclerViewAdapter:
     	    return books.size();
     	}
 	}
-
+```
 ##Step 6
 Add this in your onCreate method after you've done setContentview:
-
+```
 	//First create some books that we can use to display in the recyclerview
 	for (int i = 0; i < 5; i++) {
 	    books.add(new Book("My Great Book", "Anthony", 2016, 149));
@@ -136,7 +136,7 @@ Add this in your onCreate method after you've done setContentview:
 	mRecyclerViewAdapter = new RecyclerViewAdapter(books);
 	mAdapter = mRecyclerViewAdapter;
 	mRecyclerView.setAdapter(mAdapter);
-
+```
 ##Step 7
 Now we need to create a layout that the Books can use:
 ```
@@ -214,6 +214,6 @@ Now we need to create a layout that the Books can use:
 	        </LinearLayout>
 	    </LinearLayout>
 	</LinearLayout>```
-
+```
 ##The End
 Now you're done :) . If you did not understand a step, just create a new issue or look at the sample app.
