@@ -1,3 +1,6 @@
+#Welcome to this repository!
+Welcome. By following the steps below, you'll easily create a working and clean RecyclerView. I'll guide you through the RecyclerView by using Books as example items. If you do not understand a step, just ask me by creating a new issue or look at the sample app. The sample app contains the same code as you use when you go through all the steps.
+
 ##Step 1
 First add this to your app level build.gradle:
 ```
