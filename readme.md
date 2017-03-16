@@ -1,6 +1,9 @@
 #Welcome to this repository!
 Welcome. By following the steps below, you'll easily create a working and clean RecyclerView. I'll guide you through the RecyclerView by using Books as example items. If you do not understand a step, just ask me by creating a new issue or look at the sample app. The sample app contains the same code as you use when you go through all the steps.
 
+##Note:
+I'm using the MainActivity as an example activity, but you can use this on every Activity
+
 ##Step 1
 First add this to your app level build.gradle:
 ```
@@ -21,7 +24,7 @@ Add this to your Activity's xml file:
 	android:layout_alignParentStart="true" />
 ```
 ##Step 3
-Add the following variables at the top of your class:
+Add the following variables at the top of your MainActivity class:
 ```
 ArrayList<Book> books = new ArrayList<>();
 private RecyclerView mRecyclerView;
@@ -121,7 +124,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 }
 ```
 ##Step 6
-Add this in your onCreate method after you've done setContentview:
+Add this in your onCreate method after you've done setContentview in your MainActivity:
 ```
 //First create some books that we can use to display in the recyclerview
 for (int i = 0; i < 5; i++) {
@@ -141,7 +144,7 @@ mAdapter = mRecyclerViewAdapter;
 mRecyclerView.setAdapter(mAdapter);
 ```
 ##Step 7
-Now we need to create a layout that the Books can use:
+Now we need to create a layout that the Books can use (book.xml):
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -216,7 +219,7 @@ Now we need to create a layout that the Books can use:
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
-</LinearLayout>```
+</LinearLayout>
 ```
 ##The End
 Now you're done :) . If you did not understand a step, just create a new issue or look at the sample app.
